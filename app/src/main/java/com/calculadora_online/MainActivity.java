@@ -7,12 +7,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button numero_0,numero_1,numero_2,numero_3,numero_4,numero_5,numero_6,numero_7,numero_8,numero_9,ponto,soma,subtracao,multiplicacao,
             divisao,igual,botao_limpar;
 
-    private TextView txtEmpressao,txtResultado;
+    private TextView txtExpressao,txtResultado;
 
     private ImageView backspace;
 
@@ -43,10 +46,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         botao_limpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               txtEmpressao.setText("");
+               txtExpressao.setText("");
                txtResultado.setText("");
             }
         });
+
+        backspace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                TextView expressao = findViewById(R.id.txt_expressao);
+                String string = expressao.getText().toString();
+
+                if (!string.isEmpty()){
+
+                    byte var0 = 0;
+                    int var1 = string.length()-1;
+                    String txtExpressao = string.substring(var0, var1);
+                    expressao.setText(txtExpressao);
+                }
+                txtResultado.setText("");
+            }
+        });
+
+        igual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                try {
+                    Expression expressao = new ExpressionBuilder(txtExpressao.getText().toString()).build();
+                    double resultado = expressao.evaluate();
+                    long longResult = (long) resultado;
+
+                    if (resultado == (double)longResult){
+                        txtResultado.setText((CharSequence) String.valueOf(longResult));
+                    }else{
+                        txtResultado.setText((CharSequence) String.valueOf(resultado));
+                    }
+                }catch (Exception e){
+
+                }
+
+            }
+        });
+
     }
 
     private void IniciarComponentes(){
@@ -67,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         divisao = findViewById(R.id.bt_divisao);
         igual = findViewById(R.id.igual);
         botao_limpar = findViewById(R.id.bt_limpar);
-        txtEmpressao = findViewById(R.id.txt_expressao);
+        txtExpressao = findViewById(R.id.txt_expressao);
         txtResultado = findViewById(R.id.txt_resultado);
         backspace = findViewById(R.id.backspace);
 
@@ -76,16 +119,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void AcrescentarUmaExpressao(String string,boolean limpar_dados){
 
         if (txtResultado.getText().equals("")){
-            txtEmpressao.setText("");
+            txtExpressao.setText(" ");
         }
 
         if (limpar_dados){
-            txtResultado.setText("");
-            txtEmpressao.append(string);
+            txtResultado.setText(" ");
+            txtExpressao.append(string);
         }else{
-            txtEmpressao.append(txtResultado.getText());
-            txtEmpressao.append(string);
-            txtResultado.setText("");
+            txtExpressao.append(txtResultado.getText());
+            txtExpressao.append(string);
+            txtResultado.setText(" ");
         }
     }
 
