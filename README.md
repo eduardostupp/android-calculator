@@ -42,9 +42,5 @@ Para executar este projeto, é necessário ter o seguinte ambiente configurado:
 
 ## Contribuição
 
-Este projeto foi desenvolvido como parte de um trabalho acadêmico. Portanto, não aceitamos contribuições externas no momento.
-
-## Licença
-
-Este projeto está licenciado sob a [licença XYZ]. Veja o arquivo LICENSE para obter mais detalhes.
+Este projeto foi desenvolvido como parte de um trabalho acadêmico.
 
