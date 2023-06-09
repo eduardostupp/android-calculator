@@ -1,25 +1,25 @@
-# Aplicativo Android
+# Calculadora Android
 
-Este é um aplicativo Android desenvolvido em Java utilizando o Android Studio.
+Este é um projeto de uma calculadora Android desenvolvido em Java utilizando o Android Studio.
 
 ## Informações do Projeto
 
+- Aluno: Eduardo Stupp
 - Versão do Android Studio: 4.1.2
 - Professor: Marcondes Macaneiro
-- Aluno: Eduardo Stupp
 - Curso: Sistemas de Informação - UNIDAVI
 - Fase: 7ª Fase
 - Matéria: Desenvolvimento para Plataformas Móveis
 
 ## Descrição
 
-O objetivo deste projeto é desenvolver um aplicativo Android que realiza determinada funcionalidade. Adicione aqui uma breve descrição sobre o que o aplicativo faz ou qual é a sua proposta.
+O projeto consiste no desenvolvimento de uma calculadora Android que permite realizar operações matemáticas básicas, como adição, subtração, multiplicação e divisão. A calculadora possui uma interface intuitiva e permite a inserção de números por meio de botões, bem como a exibição do resultado em tempo real.
 
 ## Funcionalidades
 
-- [Funcionalidade 1]: Descreva brevemente a primeira funcionalidade do seu aplicativo.
-- [Funcionalidade 2]: Descreva brevemente a segunda funcionalidade do seu aplicativo.
-- [Funcionalidade 3]: Descreva brevemente a terceira funcionalidade do seu aplicativo.
+- Operações de adição, subtração, multiplicação e divisão.
+- Interface intuitiva e de fácil utilização.
+- Exibição do resultado em tempo real.
 
 ## Configuração do Ambiente
 
