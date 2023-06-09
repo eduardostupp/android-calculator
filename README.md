@@ -6,6 +6,7 @@ Este é um aplicativo Android desenvolvido em Java utilizando o Android Studio.
 
 - Versão do Android Studio: 4.1.2
 - Professor: Marcondes Macaneiro
+- Aluno: Eduardo Stupp
 - Curso: Sistemas de Informação - UNIDAVI
 - Fase: 7ª Fase
 - Matéria: Desenvolvimento para Plataformas Móveis
